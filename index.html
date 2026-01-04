@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshad | Frontend Web Developer</title>
+<meta name="description" content="Harshad | Frontend Web Developer skilled in HTML, CSS, JavaScript, Python, and Java. Building responsive and interactive web applications.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0f172a;color:#e5e7eb;line-height:1.6;overflow-x:hidden;transition:.4s}
+body.light{background:#f5f5f5;color:#111}
+
+/* Loader */
+#loader{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999}
+.spinner{width:50px;height:50px;border:5px solid #555;border-top:5px solid #60a5fa;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{100%{transform:rotate(360deg)}}
+
+/* Cursor */
+.cursor{width:20px;height:20px;border:2px solid #60a5fa;border-radius:50%;position:fixed;pointer-events:none;transform:translate(-50%,-50%);z-index:999}
+@media(max-width:768px){.cursor{display:none}}
+
+/* Scroll Progress */
+#progress{position:fixed;top:0;left:0;height:4px;background:#60a5fa;width:0%;z-index:1000}
+
+/* Header */
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+header h1{font-size:3rem;color:#60a5fa}
+header p{max-width:600px;margin:20px auto;color:#cbd5f5}
+header .btn{display:inline-block;margin:8px;padding:10px 22px;border-radius:6px;text-decoration:none;background:#60a5fa;color:#0f172a;font-weight:600;transition:0.3s}
+header .btn:hover{opacity:0.8}
+body.light header h1{color:#2563eb}
+body.light header p{color:#111}
+
+/* Sections */
+section{padding:60px 20px;max-width:1000px;margin:auto}
+h2{text-align:center;margin-bottom:30px;color:#93c5fd}
+body.light h2{color:#2563eb}
+.about p{text-align:center;max-width:800px;margin:auto}
+
+.skills,.projects,.certificates{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.card{background:#1e293b;padding:20px;border-radius:10px;text-align:center;cursor:pointer;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+body.light .card{background:#e0e7ff;color:#111}
+
+/* Footer */
+footer{text-align:center;padding:20px;background:#020617;color:#94a3b8}
+body.light footer{background:#dbeafe;color:#111}
+
+/* Typing */
+#typing::after{content:"|";animation:blink 1s infinite}
+@keyframes blink{0%,50%,100%{opacity:1}25%,75%{opacity:0}}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- Scroll Progress -->
+<div id="progress"></div>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+
+<!-- Header -->
+<header>
+  <div data-aos="fade-up">
+    <h1>Hi, I'm Harshad Navale</h1>
+    <p>A passionate <span id="typing"></span> focused on building clean, responsive, and interactive web applications.</p>
+    <a href="#projects" class="btn">Projects</a>
+    <a href="#contact" class="btn">Contact</a>
+    <a href="https://github.com/harshadnavale183-a11y" target="_blank" class="btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/harshad-navale-332a76278/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" class="btn">LinkedIn</a>
+  </div>
+</header>
+
+<!-- About -->
+<section class="about" id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    I am a motivated Frontend Web Developer with strong skills in HTML, CSS, JavaScript, Python, and Java.
+    I enjoy building real-world web applications and continuously improving my technical and problem-solving skills.
+    <br><br>
+    <strong>Education:</strong> BSc Computer Science<br>
+    <strong>Experience:</strong> Personal Projects &amp; Internship-Based Learning
+  </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">HTML5</div>
+    <div class="card">CSS3</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Java</div>
+    <div class="card">React (Basic)</div>
+    <div class="card">Git &amp; GitHub</div>
+    <div class="card">DBMS / RDBMS</div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_05/','_blank')">
+      <h3>Weather App</h3>
+      <p>Weather application using API, JavaScript, and responsive UI design.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_02/','_blank')">
+      <h3>Stopwatch App</h3>
+      <p>Interactive stopwatch with start, pause, reset, and lap features.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_03/','_blank')">
+      <h3>Tic Tac Toe Game</h3>
+      <p>Dual-mode game (Player vs Player &amp; Player vs AI) using JavaScript.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_01/','_blank')">
+      <h3>Simple Web Page</h3>
+      <p>Clean and responsive single-page website built with HTML &amp; CSS.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates" data-aos="fade-up">
+  <h2>Professional Certificates</h2>
+  <div class="card">
+    HTML  &amp; CSS Certificate
+    </div>
+    <div class="card" onclick="window.open('https://ude.my/UC-be8e23b1-1878-40d4-b261-723e66451195','_blank')">
+      Java for Beginners Certificate
+    </div>
+    <div class="card" onclick="window.open('https://ude.my/UC-ccf3dc0d-c24d-491d-a7d2-65c4ed4636f2','_blank')">
+      Python Programming Certificate
+    </div>
+    
+    
+  
+</section>
+
+<!-- Contact -->
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p style="text-align:center">
+    📧 Email: harshadnavale183@gmail.com
+    call:7719067677</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Harshad | Frontend Web Developer</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1200,once:true});
+
+// Loader
+window.onload=()=>document.getElementById("loader").style.display="none";
+
+// Dark/Light Mode Toggle
+document.body.insertAdjacentHTML('beforeend',
+'<div style="position:fixed;top:20px;right:20px;z-index:1000"><button onclick="document.body.classList.toggle(`light`)" style="padding:6px 15px;border:none;border-radius:6px;background:#60a5fa;cursor:pointer">🌙 / ☀️</button></div>');
+
+// Scroll Progress Bar
+window.addEventListener("scroll",()=>{let s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById("progress").style.width=(s/h)*100+"%"});
+
+// Custom Cursor
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px"});
+
+// Typing Animation
+const texts=["Frontend Developer","Web Developer","JavaScript Learner","Creative Designer"];
+let i=0,j=0,d=false;
+(function type(){
+  let el=document.getElementById("typing"),t=texts[i];
+  el.textContent=d?t.slice(0,--j):t.slice(0,++j);
+  if(j==t.length+1){d=true;setTimeout(type,1200);return}
+  if(j==0&&d){d=false;i=(i+1)%texts.length}
+  setTimeout(type,d?60:120)
+})();
+</script>
+
+
+</body></html>
